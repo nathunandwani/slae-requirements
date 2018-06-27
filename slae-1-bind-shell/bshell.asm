@@ -1,6 +1,23 @@
 global _start
 section .text
 _start:
+
+	;bind(fd, (address of struct), sizeof(struct))
+
+	;socketcall = 0x66
+	;bind = 0x02
+
+	;eax = 0x66
+	;ebx = 0x02
+	;ecx = addr of args
+
+	;args: fd, address of struct, sizeof(struct)
+
+	;push size of struct
+	;push address of struct
+	;push fd
+	;ecx = esp
+
 	xor eax, eax
 	xor ebx, ebx
 	xor ecx, ecx	
