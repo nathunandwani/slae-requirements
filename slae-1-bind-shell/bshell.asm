@@ -1,3 +1,8 @@
+;Bind Shell - Linux/x86 NASM
+;Author: Nathu Nandwani
+;SecurityTube ID: SLAE-1261
+
+
 global _start
 section .text
 _start:

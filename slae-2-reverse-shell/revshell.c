@@ -1,3 +1,8 @@
+/*
+	Reverse Shell - Linux/x86
+	Author: Nathu Nandwani
+	SecurityTube ID: SLAE-1261
+*/
 #include <unistd.h>
 #include <arpa/inet.h>
 

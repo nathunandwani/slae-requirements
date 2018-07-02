@@ -1,10 +1,15 @@
-// reverse shell - SLAE-1261
-// gcc -fno-stack-protector -z execstack execshell.c -o execshell
+/*
+	Reverse Shell - Linux/x86 Shellcode
+	Author: Nathu Nandwani
+	SecurityTube ID: SLAE-1261
+*/
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
+
+//gcc -fno-stack-protector -z execstack execshell.c -o execshell
 
 int main() 
 {
