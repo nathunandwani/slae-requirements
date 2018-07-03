@@ -45,7 +45,7 @@
 
 <i>Blog post must mention:<i>
 <b>This blog post has been created for completing the requirements of the SecurityTube Linux Assembly Expert Certification: http://securitytube-training.com/online-courses/securitytube-linux-assembly-expert/<br><br>
-<u>Student ID: SLAE-1261</u></b><br><br>
+<u>Student ID: SLAE-1261</u></b><br>
 
 <i>Evaluation Criteria</i>
 <ul>
