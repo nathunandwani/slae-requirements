@@ -1,6 +1,8 @@
 // apt-get install libmcrypt-dev
 // gcc -o crypter crypter.c -lmcrypt
-
+// Decoder - Linux/x86 NASM
+// Author: Nathu Nandwani
+// SecurityTube ID: SLAE-1261
 #include <stdio.h>
 #include <string.h>
 #include <mcrypt.h>

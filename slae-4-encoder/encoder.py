@@ -1,3 +1,7 @@
+# Decoder - Linux/x86 NASM
+# Author: Nathu Nandwani
+# SecurityTube ID: SLAE-1261
+
 #Encoding Algorithm: (x + 0x01) xor 0xAA = y (Encoded)
 #Limitation: Not able to support x = 0xA9 (Will result to 0x00)
 
