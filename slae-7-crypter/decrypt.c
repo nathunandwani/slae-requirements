@@ -1,4 +1,9 @@
-// gcc -o decrypt decrypt.c -lmcrypt -fno-stack-protector -z execstack
+// apt-get install libmcrypt-dev
+// gcc -o decrypt decrypt.c -lmcrypt
+// Decoder - Linux/x86 NASM
+// Author: Nathu Nandwani
+// SecurityTube ID: SLAE-1261
+// Compile: gcc -o decrypt decrypt.c -lmcrypt -fno-stack-protector -z execstack
 
 #include <stdio.h>
 #include <string.h>
