@@ -73,4 +73,4 @@
 	<li>Link to Twitter/FB posts</li>
 </ul>
 
-<h4>Around 5 working days for the result</h4>
+<h4>Around 7 working days for the result</h4>
